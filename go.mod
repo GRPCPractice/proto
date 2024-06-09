@@ -1,4 +1,4 @@
-module github.com/GRPCPractice/proto
+module proto
 
 go 1.20
 
