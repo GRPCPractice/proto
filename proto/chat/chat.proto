@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+option go_package = "proto/chat";
+
+package chat;
+
+import "google/protobuf/empty.proto";
+
+service ChatService {
+  rpc Connect(ConnectRequest) returns (stream ChatMessage) {}
+  rpc Send(ChatMessage) returns (google.protobuf.Empty) {}
+}
+
+message ConnectRequest {
+  string user_id = 1;
+}
+
+message ChatMessage {
+  string user_id = 1;
+  string message = 2;
+}

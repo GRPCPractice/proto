@@ -10,6 +10,7 @@ brew install protobuf
 ```shell
 protoc --go_out=. --go-grpc_out=. -Iproto proto/helloworld/helloworld.proto
 protoc --go_out=. --go-grpc_out=. -Iproto proto/user/user.proto
+protoc --go_out=. --go-grpc_out=. -Iproto proto/chat/chat.proto
 ```
 
 ## Go get
